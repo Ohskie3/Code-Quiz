@@ -31,3 +31,9 @@
   font-weight: bold;
   font-size: 28px;
 }
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
