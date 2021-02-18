@@ -1,0 +1,33 @@
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 400px;
+  margin-bottom: 1em;
+  
+}
+
+#quizHeading {
+  font-size: 64px;
+}
+#question {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start {
+  display: flex;
+  align-items: center;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 28px;
+}
