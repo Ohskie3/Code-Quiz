@@ -10,6 +10,10 @@
   
 }
 
+#question-container {
+  font-size: 64px;
+  font-weight: bold;
+}
 #quizHeading {
   font-size: 64px;
 }
@@ -32,8 +36,26 @@
   font-size: 28px;
 }
 
+#answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .answer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.answer:hover {
+  color: white;
+  background-color: blue;
+}
+
+.btn-primary:hover {
+  color: blue;
+  background-color: white;
 }
