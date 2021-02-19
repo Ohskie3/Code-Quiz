@@ -1,3 +1,4 @@
+// list of questions
 let quizQuestions = [
   {
     question: 'What does HTML stand for?',
@@ -32,6 +33,7 @@ let countDownInterval = null
 let seconds = 60
 document.getElementById('start').addEventListener('click', () => {
 
+  // timer 
   countDownInterval = setInterval(() => {
     seconds--
     document.getElementById('timer').textContent = `Timer: ${seconds}`
@@ -52,6 +54,7 @@ document.getElementById('start').addEventListener('click', () => {
     }
   }, 1000);
 
+  // question selector
   document.getElementById('question').textContent = quizQuestions[0].question
   document.getElementById('answers').innerHTML = `
   <button class="answer" value="${quizQuestions[0].answers[0]}">${quizQuestions[0].answers[0]}</button>
@@ -61,6 +64,7 @@ document.getElementById('start').addEventListener('click', () => {
   `
 })
 
+// when start button is first clicked
 document.addEventListener('click', event => {
   if (event.target.className === 'answer') {
     // is answer correct or not
@@ -97,6 +101,7 @@ document.addEventListener('click', event => {
         <button class="answer" value="${quizQuestions[currentQuestion].answers[0]}">${quizQuestions[currentQuestion].answers[3]}</button>
       `
     }
+    // submitting score and initials to local storage
   } else if (event.target.id === 'submit') {
     // score
     // initials
@@ -117,6 +122,7 @@ document.addEventListener('click', event => {
           <button id="clearScores">Clear High Scores</button> 
         </div>
       `
+      // clearing local storage
   } else if (event.target.id === 'clearScores') {
     localStorage.removeItem('highScoreListKey')
   }
